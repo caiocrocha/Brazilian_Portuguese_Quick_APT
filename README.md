@@ -10,4 +10,4 @@ We share the phonetic transcriptions for CORAA ASR's train, dev, and test set, a
 | 10h    | 0.2197 | 0.1587 |
 | 60h    | 0.2190 | 0.1600 |
 
-Additionally, we share the APT model fine-tuned on 10 hours of audio in the [Hugging Face](https://huggingface.co/caiocrocha/wav2vec2-large-xlsr-53-phoneme-portuguese) repository. The model card can be found in [ModelCard.md](./ModelCard.md).
+Additionally, we share the APT model fine-tuned on 10 hours of audio in the [Hugging Face](https://huggingface.co/caiocrocha/wav2vec2-large-xlsr-53-phoneme-portuguese) repository.
