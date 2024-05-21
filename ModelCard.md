@@ -1,4 +1,4 @@
-# wav2vec2-large-xlsr-53-phoneme-portuguese Model Card
+# Wav2vec 2.0 APT PT-BR Model Card
 
 ## Model Details
 
