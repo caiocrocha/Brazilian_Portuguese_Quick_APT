@@ -10,4 +10,10 @@ We share the phonetic transcriptions for CORAA ASR's train, dev, and test set, a
 | 10h    | 0.2197 | 0.1587 |
 | 60h    | 0.2190 | 0.1600 |
 
+Folder _configs/_ contains the configuration files used for fine-tuning. A small description of the input files fields is given below:
+
+| file_path |         g2p        |        g2p_ipa        |              transcript_ipa        |             *transcript_encoded*              |
+|-----------|--------------------|-----------------------|--------------------------------|--------------------------------------------|
+| File path | Raw G2P transcript | G2P transcript in IPA | Standardized G2P transcript in IPA | *Encoded transcript used in the fine-tuning* |
+
 Additionally, we share the APT model fine-tuned on 10 hours of audio in the [Hugging Face](https://huggingface.co/caiocrocha/wav2vec2-large-xlsr-53-phoneme-portuguese) repository.

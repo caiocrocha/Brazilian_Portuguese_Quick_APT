@@ -1,0 +1,79 @@
+{
+    "run_name": "Wav2Vec-fine-tuning-phonemes",
+    "run_description": "Fine tuning phonemes",
+    "seed": 42,
+
+    "sampling_rate": 16000,
+    
+    "num_hidden_layers": 24,
+
+    "vocab":{
+        "vocab_path": "/home/pesquisa/Caio/wav2vec2_phoneme_1h_test/vocab.json",
+        "blank": "<pad>",
+        "silence": "|",
+        "unk": "<unk>"
+    },
+
+    "batch_size": 32,
+    "mixed_precision": true,
+    "early_stop_epochs": 50,
+
+    "epochs": 100,
+    "lr": 5e-5,
+    "gradient_accumulation_steps": 1,
+  
+    "logging_steps": 100,
+    "load_best_model_at_end": true,
+    "save_total_limit": 2,
+    "warmup_ratio": 0,
+    "warmup_steps": 0,
+  
+    "num_loader_workers": 8, 
+  
+    "freeze_feature_extractor": true,
+    "attention_dropout": 0.1, 
+    "activation_dropout": 0.1, 
+    "hidden_dropout": 0.1,
+    "feat_proj_dropout": 0.1, 
+    "mask_time_prob": 0.1, 
+    "layerdrop": 0.1,  
+    "gradient_checkpointing": true,
+
+    "output_path": "/home/pesquisa/Caio/wav2vec2_phoneme_1h_test/output",
+  
+    "dataset_cache": "/home/pesquisa/Caio/wav2vec2_phoneme_1h_test/datasets",
+
+    "datasets":{
+        "train":
+            [
+              {
+                "name": "csv",
+                "path": "csv",
+                "data_files": ["/home/pesquisa/Caio/wav2vec2_phoneme_1h_test/input/metadata_train_final_g2p_ipa_sample_1h.csv"],
+                "text_column": "transcript_encoded",
+                "path_column": "file_path"
+              }
+            ]
+        ,
+        "devel":
+            [ 
+        
+              {
+                "name": "csv",
+                "path": "csv",
+                "data_files": ["/home/pesquisa/Caio/wav2vec2_phoneme_1h_test/input/metadata_dev_final_g2p_ipa_sample_1h.csv"],
+                "text_column": "transcript_encoded",
+                "path_column": "file_path"
+              }
+            ] 
+            ,
+        "test":
+              {
+                "name": "csv",
+                "path": "csv",
+                "data_files": ["/home/pesquisa/Caio/wav2vec2_phoneme_1h_test/input/metadata_test_final_g2p_ipa_sample_1h.csv"],
+                "text_column": "transcript_encoded",
+                "path_column": "file_path"
+              }
+    }
+}
