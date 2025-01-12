@@ -2,8 +2,17 @@
 
 Here you can find the data and scripts used to develop my undergraduate thesis titled "Creating a Dataset for Automatic Phonetic Transcription in Brazilian Portuguese". We used the CORAA ASR corpus [(Candido Junior, 2022)](https://doi.org/10.1007/s10579-022-09621-4) and FalaBrasil's G2P converter [(Neto, 2011)](https://doi.org/10.1007/s13173-010-0023-1) to create a dataset of automatic phonetic transcriptions for training Automatic Phonetic Transcription (APT) models for Brazilian Portuguese (PT-BR). The phonetic transcriptions were standardized according to the phoneme charts presented by ([Ivo, 2019a](https://grad.letras.ufmg.br/arquivos/monitoria/Aula%2002%20apoio.pdf); [Ivo, 2019b](https://grad.letras.ufmg.br/arquivos/monitoria/Aula%2003%20apoio.pdf)), ensuring conformity with the PT-BR phonology literature.
 
-We share the phonetic transcriptions for CORAA ASR's train, dev, and test set, alongside three subsets of the train set (1h, 10h, and 60h of audio), one subset of the dev test (1h of audio), and one subset of the test set (1h of audio). The datasets are available at _configs/wav2vec2\_phoneme\_*\_test/input/_. The CORAA ASR corpus is availabe at [nilc-nlp/CORAA](https://github.com/nilc-nlp/CORAA).
+We share the phonetic transcriptions for CORAA ASR's train, dev, and test set, alongside three subsets of the train set (1h, 10h, and 60h of audio), one subset of the dev test (1h of audio), and one subset of the test set (1h of audio). 
 
+### Datasets
+
+The datasets are available at _data\_and\_configs/wav2vec2\_phoneme\_*\_test/input/_. 
+
+### Source data
+
+The CORAA ASR corpus is availabe at [nilc-nlp/CORAA](https://github.com/nilc-nlp/CORAA).
+
+### wav2vec 2.0 models
 Furthermore, we fine-tuned three wav2vec 2.0 models, which achieved the following PER (Phonetic Error Rates):
 
 | Subset | Dev    | Test   |
